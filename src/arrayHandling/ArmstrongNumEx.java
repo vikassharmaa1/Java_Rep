@@ -9,7 +9,7 @@ public class ArmstrongNumEx {
 		while (n > 0) {
 			a = n % 10;
 			n = n / 10;
-			c = c + (a * a * a);
+			c += (a * a * a);
 			
 		}
 		if (temp == c){

@@ -2,19 +2,24 @@ package stringHandling;
 
 public class StringReverse {
 
-	public static String reverse(String input) {
-		char[] in = input.toCharArray();
-		int begin = 0;
-		int end = in.length - 1;
+	public static String reverse(String str) {
+		char[] a = str.toCharArray();
+		int i = 0;
+		int j = a.length - 1;
 		char temp;
-		while (end > begin) {
-			temp = in[begin];
-			in[begin] = in[end];
-			in[end] = temp;
-			end--;
-			begin++;
+		while (j > i) {
+			temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+			j--;
+			i++;
 		}
-		return new String(in);
+		return new String(a);
+	}
+	
+	public static void main(String[] args){
+		String revString = StringReverse.reverse("Vikas Sharma");
+		System.out.println(revString);
 	}
 
 }
