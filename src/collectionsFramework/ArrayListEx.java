@@ -14,6 +14,7 @@ public class ArrayListEx {
 		myList.add("object 4");
 		myList.add("object 5");
 		
+		
 		ListIterator<String> Iterator = myList.listIterator();
 		while(Iterator.hasNext())
 		{
