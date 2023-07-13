@@ -8,21 +8,21 @@ public class NumberOfOccurencesAllChar {
 		// creating an array of size 256 (ASCII_SIZE)
 		int count[] = new int[MAX_CHAR];
 		// finds the length of the string
-		int len = str.length();
+		int length = str.length();
 		// initialize count array index
-		for (int i = 0; i < len; i++)
+		for (int i = 0; i < length; i++)
 			count[str.charAt(i)]++;
 		// create an array of given String size
 		char ch[] = new char[str.length()];
-		for (int i = 0; i < len; i++) {
+		for (int i = 0; i < length; i++) {
 			ch[i] = str.charAt(i);
-			int find = 0;
+			int search = 0;
 			for (int j = 0; j <= i; j++) {
 				// if any matches found
 				if (str.charAt(i) == ch[j])
-					find++;
+					search++;
 			}
-			if (find == 1)
+			if (search == 1)
 				// prints occurrence of the character
 				System.out.println("The occurrence of " + str.charAt(i) + " is: " + count[str.charAt(i)]);
 		}

@@ -2,37 +2,27 @@ package stringHandling;
 
 public class ReverseEachWordString {
 
-	static void reverseEachWordOfString(String inputString) {
-		String[] words = inputString.split(" ");
-
-		String reverseString = "";
+	static void reverseEachWordOfString(String str) {
+		String[] words = str.split(" ");
+		String rString = "";
 
 		for (int i = 0; i < words.length; i++) {
 			String word = words[i];
-
-			String reverseWord = "";
+			String rWord = "";
 
 			for (int j = word.length() - 1; j >= 0; j--) {
-				reverseWord = reverseWord + word.charAt(j);
+				rWord = rWord + word.charAt(j);
 			}
-
-			reverseString = reverseString + reverseWord + " ";
+			rString = rString + rWord + " ";
 		}
-
-		System.out.println(inputString);
-
-		System.out.println(reverseString);
-
-		System.out.println("-------------------------");
+		System.out.println(str);
+		System.out.println(rString+"\n");		
 	}
 
 	public static void main(String[] args) {
 		reverseEachWordOfString("Java Concept Of The Day");
-
 		reverseEachWordOfString("Java J2EE JSP Servlets Hibernate Struts");
-
 		reverseEachWordOfString("I am string not reversed");
-
 		reverseEachWordOfString("Reverse Me");
 	}
 }
