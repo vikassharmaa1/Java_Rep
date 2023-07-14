@@ -18,9 +18,9 @@ public class BinaryEquivalent {
 	public static void main(String[] args) {
 		BinaryEquivalent obj = new BinaryEquivalent();
 		System.out.println("\nBinaryEquivalent of 7: ");
-		obj.decimalBinary(7);
+		obj.decimalBinary(17);
 		System.out.println("\nBinaryEquivalent of 9: ");
-		obj.decimalBinary(9);
+		obj.decimalBinary(19);
 
 	}
 

@@ -17,7 +17,7 @@ public class ArmstrongNumEx {
 		    
 		}
 		else
-			System.out.println("Not Armstrong number");
+			System.out.println("Not an Armstrong number");
 
 	}
 

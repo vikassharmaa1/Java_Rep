@@ -12,21 +12,28 @@ public class ArrayListEx {
 		myList.add("object 2");
 		myList.add("object 3");
 		myList.add("object 4");
-		myList.add("object 5");		
+		myList.add("object 5");
 
 		ListIterator<String> Iterator = myList.listIterator();
-		while(Iterator.hasNext())
-		{
+
+		//Print Array list Using listIterator
+
+		while (Iterator.hasNext()) {
 			String next = Iterator.next();
+			System.out.println(next);
 		}
-		
-		for(String next:myList)
-		{
-			
+
+		//Print Array list Using Enhanced for Loop
+
+		for (String next : myList) {
+			System.out.println(next);
 		}
-		for(int i=0;i<myList.size();i++)
-		{
+
+		//Print Array list Using for Loop
+
+		for (int i = 0; i < myList.size(); i++) {
 			String next = myList.get(i);
+			System.out.println(next);
 		}
 
 	}

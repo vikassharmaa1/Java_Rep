@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class ReverseWordByWord {
 
-	public static String reverseTheSentence(String inputString) {
-		String[] words = inputString.split("\\s");
+	public static String rString(String str) {
+		String[] words = str.split("\\s");
 
-		String outputString = "";
+		String str1 = "";
 
 		for (int i = words.length - 1; i >= 0; i--) {
-			outputString = outputString + words[i] + " ";
+			str1 = str1 + words[i] + " ";
 		}
 
-		return outputString;
+		return str1;
 	}
 
 	public static void main(String[] args) {
@@ -21,13 +21,13 @@ public class ReverseWordByWord {
 
 		System.out.println("Enter Input String :");
 
-		String inputString = sc.nextLine();
+		String str = sc.nextLine();
 
-		String outputString = reverseTheSentence(inputString);
+		String str1 = rString(str);
 
-		System.out.println("Input String : " + inputString);
+		System.out.println("Input String : " + str);
 
-		System.out.println("Output String : " + outputString);
+		System.out.println("Output String : " + str1);
 
 		sc.close();
 	}
