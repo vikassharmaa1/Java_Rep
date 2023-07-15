@@ -13,7 +13,7 @@ public class ReverSeNumber {
 	            a=b;
 	        }
 	        System.out.println("Reverse of the given number: "+r);
-	        System.out.println("Sum Of the given number: "+sum);
+	        //System.out.println("Sum Of the given number: "+sum);
 	    }
 	}
 
