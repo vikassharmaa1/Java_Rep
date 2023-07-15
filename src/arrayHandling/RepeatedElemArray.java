@@ -11,9 +11,9 @@ public class RepeatedElemArray {
 		for (i = 0; i < size; i++) {
 			for (j = i + 1; j < size; j++) {
 				if (arr[i] == arr[j]) {
-					 k = arr[i];
+					System.out.print(+arr[i] + " ");
 				}
-					System.out.print(+ k + " ");
+
 			}
 		}
 	}
@@ -21,7 +21,7 @@ public class RepeatedElemArray {
 	public static void main(String[] args) {
 		RepeatedElemArray repeat = new RepeatedElemArray();
 		int arr[] = { 4, 2, 4, 5, 2, 3, 1 };
-		int arr_size = arr.length;		
+		int arr_size = arr.length;
 		repeat.printRepeating(arr, arr_size);
 	}
 }

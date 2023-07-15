@@ -14,7 +14,7 @@ public class CombineEqualStringsAtAlternateIndex {
 	}
 
 	public static void main(String[] args) {
-		combineStrings("hello", "worldometer");
+		combineStrings("hello", "Java");
 	}
 
 }
