@@ -1,27 +1,61 @@
 package com.interview.related;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RepeatedElemArray {
 
-	public void printRepeating(int arr[], int size) {
-		int i, j, k = 0;
-		System.out.println("Repeated Elements are :");
-		for (i = 0; i < size; i++) {
-			for (j = i + 1; j < size; j++) {
+	public static int[] printRepeatingV1(int[] arr) {
+
+		if (arr == null || arr.length == 0) {
+			throw new IllegalArgumentException("The given array cannot be null or empty");
+		}
+		int[] output = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
 				if (arr[i] == arr[j]) {
-					 k = arr[i];
+					output[i] = arr[i];
 				}
-					System.out.print(+ k + " ");
 			}
 		}
+		return output;
+	}
+
+	public static List<Integer> printRepeatingV2(int[] arr) {
+
+		if (arr == null || arr.length == 0) {
+			throw new IllegalArgumentException("The given array cannot be null or empty");
+		}
+		Set<Integer> set = new HashSet<>();
+		List<Integer> li = new ArrayList<Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			if (set.contains(arr[i])) {
+				li.add(arr[i]);
+			} else {
+				set.add(arr[i]);
+			}
+		}
+
+		return li;
 	}
 
 	public static void main(String[] args) {
-		RepeatedElemArray repeat = new RepeatedElemArray();
-		int arr[] = { 4, 2, 4, 5, 2, 3, 1 };
-		int arr_size = arr.length;		
-		repeat.printRepeating(arr, arr_size);
+		int arr[] = { 4, 2, 4, 5, 2, 3, 1, 12, 45, 66, 45, 77, 89, 89 };
+
+		int[] result = RepeatedElemArray.printRepeatingV1(arr);
+		for (int i = 0; i < result.length; i++) {
+			if (result[i] != 0) {			
+				System.out.print(result[i] + " ");
+			}
+
+		}
+
+		/*
+		 * List<Integer> r3 = RepeatedElemArray.printRepeatingV2(arr);
+		 * System.out.println("r3: " + r3);
+		 */
 	}
 }

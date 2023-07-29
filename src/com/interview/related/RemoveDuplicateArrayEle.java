@@ -13,7 +13,8 @@ public class RemoveDuplicateArrayEle {
 		int j = 0;
 		for (int i = 0; i < a.length - 1; i++) {
 			if (a[i] != a[i + 1]) {
-				b[j++] = a[i];
+				b[j++] = a[i]; // loops through the elements i in a array and assigns (a[i] Or value at index i) to the b array
+				// at index j before incrementing it.
 			}
 		}
 		b[j++] = a[a.length - 1];

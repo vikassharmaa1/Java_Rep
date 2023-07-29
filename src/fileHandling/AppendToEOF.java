@@ -2,16 +2,19 @@ package fileHandling;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class AppendToEOF {
 
 	public static void main(String[] args) {
 		try {
-			String data = " This content will append to the end of the file";
+			
 
-			File file = new File("javaio-appendfile.txt");
+			File file = new File("C:/HCL/javaio-appendfile.txt");
+			String data = " This content will append to the end of the file"+" And at the end"+"of the end"+" by the end";
 
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
@@ -19,10 +22,10 @@ public class AppendToEOF {
 			}
 
 			// true = append file
-			FileWriter fileWritter = new FileWriter(file.getName(), true);
-			BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-			bufferWritter.write(data);
-			bufferWritter.close();
+			FileWriter fw = new FileWriter(file);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(data);
+			bw.close();
 
 			System.out.println("Done");
 

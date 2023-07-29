@@ -5,30 +5,27 @@ import java.util.Arrays;
 public class MergeTwoArrays {
 
 	public static void main(String[] args) {
-		int a[] = { 30, 25, 40 };
-		int b[] = { 45, 50, 55, 60, 65 };
-
-		int a1 = a.length;
-		int b1 = b.length;
-		int c1 = a1 + b1;
-
-		int[] c = new int[c1];
-		for (int i = 0; i < a1; i++) {
-
-			c[i] = a[i];
-
+		int a[] = new int[8];
+		a[0] = 25;
+		a[1] = 35;
+		a[2] = 45;
+		a[3] = 55;
+		a[4] = 65;
+		int b[] = new int[3];
+		b[0] = 30;
+		b[1] = 25;
+		b[2] = 40;
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int m = a.length, n = b.length;
+		while (n > 0) {
+			if (m <= 0 || a[m - 1] < b[n - 1])
+				a[n + m - 1] = b[--n];
+			else
+				a[n + m - 1] = a[--m];
 		}
-		for (int i = 0; i < b1; i++) {
-
-			c[a1 + i] = b[i];
-
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
 		}
-		/*for (int i = 0; i < c1; i++) {
-
-			System.out.println(c[i]);
-
-		}*/
-		System.out.println(Arrays.toString(c));
 	}
-
 }

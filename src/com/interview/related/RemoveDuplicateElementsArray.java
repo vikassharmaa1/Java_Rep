@@ -18,7 +18,7 @@ public class RemoveDuplicateElementsArray {
 }
 
 // Program to remove duplicates using ArrayList
-class RemoveDuplicateEleArray {
+class RemoveDuplicateElementsArrayV1 {
 	public static void main(String[] args) {
 		int[] a = { 10, 20, 40, 20, 80, 40, 77, 44, 66, 66 };
 		List<Integer> li = new ArrayList<>();
@@ -28,5 +28,23 @@ class RemoveDuplicateEleArray {
 			}
 		}
 		System.out.print(li);
+	}
+}
+
+class RemoveDuplicateElementsArrayV2 {
+	public static void main(String[] args) {
+		int[] a = { 35, 20, 40, 20, 80, 40, 77, 44, 66, 66, 88, 88, 99 };
+		Arrays.sort(a);		
+		int len = a.length;
+		int i = 0;
+		if (len <= 1)
+			System.out.println(len);
+		for (int j = 1; j < len; j++) {
+			if (a[j] != a[i]) {
+				a[++i] = a[j];
+				System.out.print(a[i]+" ");
+			}
+			//System.out.print(i + 1);
+		}
 	}
 }

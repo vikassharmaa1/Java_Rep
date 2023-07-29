@@ -3,7 +3,7 @@ package com.interview.related;
 public class SortStringAlphabetically_Numerically_SpecialChars {
 
 	public static void main(String[] args) {
-		String s = "He!llo#Ja%v*a& Pr!ogr#am%m*in&g Lan?#guag(e";
+		String s = "He!llo#Ja%v*a& Pr!ogr#am%m*in&g Lan?#guag(e";		
 		String alp = "";
 		String num = "";
 		String spe = "";

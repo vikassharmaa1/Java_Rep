@@ -49,7 +49,7 @@ public class MergeAndSortArray {
 			}
 
 			for (int i = 0; i < c.length; i++)
-				System.out.println(c[i]);
+				System.out.print(" "+c[i]);
 		}
 	}
 }

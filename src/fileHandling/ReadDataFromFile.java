@@ -9,21 +9,21 @@ public class ReadDataFromFile {
 
 	public static void main(String[] args) {
 
-		String fileName = "temp.txt";
+		String fileName = "C:/HCL/temp.txt";
 
 		String line = null;
 
 		try {
 
-			FileReader fileReader = new FileReader(fileName);
+			FileReader fr = new FileReader(fileName);
 
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			BufferedReader br = new BufferedReader(fr);
 
-			while ((line = bufferedReader.readLine()) != null) {
+			while ((line = br.readLine()) != null) {
 				System.out.println(line);
 			}
 
-			bufferedReader.close();
+			br.close();
 		} catch (FileNotFoundException ex) {
 			System.out.println("Unable to open file '" + fileName + "'");
 		} catch (IOException ex) {
