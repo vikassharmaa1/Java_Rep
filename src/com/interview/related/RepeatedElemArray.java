@@ -24,11 +24,57 @@ public class RepeatedElemArray {
 		return output;
 	}
 
-	public static List<Integer> printRepeatingV2(int[] arr) {
+	public static void main(String[] args) {
+		int arr[] = { 4, 2, 4, 5, 2, 3, 1, 12, 45, 66, 45, 77, 89, 89 };
 
+		int[] result = RepeatedElemArray.printRepeatingV1(arr);
+		for (int i = 0; i < result.length; i++) {
+			if (result[i] != 0) {
+				System.out.print(result[i] + " ");
+			}
+
+		}
+	}
+
+	// Program Version 2
+
+	static class PrintRepeatingV2 {
+		public static List<Integer> printRepeatingV2(int[] arr) {
+
+			if (arr == null || arr.length == 0) {
+				throw new IllegalArgumentException("The given array cannot be null or empty");
+			}
+			Set<Integer> set = new HashSet<>();
+			List<Integer> li = new ArrayList<Integer>();
+			for (int i = 0; i < arr.length; i++) {
+				if (set.contains(arr[i])) {
+					li.add(arr[i]);
+				} else {
+					set.add(arr[i]);
+				}
+			}
+
+			return li;
+		}
+
+		public static void main(String[] args) {
+			int arr[] = { 4, 2, 4, 5, 2, 3, 1, 12, 45, 66, 45, 77, 89, 89 };
+
+			List<Integer> r3 = PrintRepeatingV2.printRepeatingV2(arr);
+			System.out.println("r3: " + r3);
+
+		}
+	}
+}
+
+// Program Version 3
+
+class PrintRepeatingV3 {
+	public static void main(String[] args) {
+		int arr[] = { 4, 2, 4, 5, 2, 3, 1, 12, 45, 66, 45, 77, 89, 89 };
 		if (arr == null || arr.length == 0) {
 			throw new IllegalArgumentException("The given array cannot be null or empty");
-		}
+		}		
 		Set<Integer> set = new HashSet<>();
 		List<Integer> li = new ArrayList<Integer>();
 		for (int i = 0; i < arr.length; i++) {
@@ -38,24 +84,6 @@ public class RepeatedElemArray {
 				set.add(arr[i]);
 			}
 		}
-
-		return li;
-	}
-
-	public static void main(String[] args) {
-		int arr[] = { 4, 2, 4, 5, 2, 3, 1, 12, 45, 66, 45, 77, 89, 89 };
-
-		int[] result = RepeatedElemArray.printRepeatingV1(arr);
-		for (int i = 0; i < result.length; i++) {
-			if (result[i] != 0) {			
-				System.out.print(result[i] + " ");
-			}
-
-		}
-
-		/*
-		 * List<Integer> r3 = RepeatedElemArray.printRepeatingV2(arr);
-		 * System.out.println("r3: " + r3);
-		 */
+		System.out.println(li);
 	}
 }
