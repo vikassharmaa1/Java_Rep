@@ -10,17 +10,19 @@ public class PalindromicSubstrings {
 			}
 			start++;
 			end--;
+			//System.out.println(s);
 		}
+		
 		return true;
 	}
 
 	public static void isPalindromeString(String s) {
-		int n = s.length();
+		int n = s.length();		
 		for (int i = 0; i < n; i++) {
 			for (int j = i + 1; j <= n; j++) {
-				String ss = s.substring(i, j);
+				String ss = s.substring(i, j);				
 				if (palindrome(ss)) {
-					if (ss.length() > 2) {
+					if (ss.length() > 2) {						
 						System.out.println(ss);
 					}
 				}
