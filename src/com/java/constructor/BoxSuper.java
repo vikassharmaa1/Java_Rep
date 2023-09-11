@@ -10,14 +10,12 @@ class BoxSuper {
 		width = ob.width;
 		height = ob.height;
 		depth = ob.depth;
-
 	}
 
 	BoxSuper(double w, double h, double d) {
 		width = w;
 		height = h;
 		depth = d;
-
 	}
 
 	public class BoxweightSuper extends BoxSuper {
@@ -32,7 +30,6 @@ class BoxSuper {
 			super(w, h, d);
 			weight = m;
 		}
-
 	}
 }
 

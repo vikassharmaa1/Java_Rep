@@ -34,17 +34,18 @@ class RemoveDuplicateElementsArrayV1 {
 class RemoveDuplicateElementsArrayV2 {
 	public static void main(String[] args) {
 		int[] a = { 35, 20, 40, 20, 80, 40, 77, 44, 66, 66, 88, 88, 99 };
-		Arrays.sort(a);		
+		Arrays.sort(a);
 		int len = a.length;
 		int i = 0;
-		if (len <= 1)
+		if (len <= 1) {
 			System.out.println(len);
+			System.exit(0);
+		}
 		for (int j = 1; j < len; j++) {
 			if (a[j] != a[i]) {
 				a[++i] = a[j];
-				System.out.print(a[i]+" ");
+				System.out.print(a[i] + " ");
 			}
-			//System.out.print(i + 1);
 		}
 	}
 }
